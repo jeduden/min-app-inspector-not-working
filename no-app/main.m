@@ -50,7 +50,7 @@ int main(int argc, char * argv[]) {
             if( inspector != nil ) {
                 dispatch_source_cancel(timer);
                 
-               //[runtime executeModule:@"./"];
+                [runtime executeModule:@"./"];
                 JSValueRef exception;
                 JSStringRef code = JSStringCreateWithUTF8CString("debugger;console.log(\"Hello inline\");");
                 JSEvaluateScript(runtime.globalContext,code, NULL, NULL, 0, &exception);
